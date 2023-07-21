@@ -1,0 +1,125 @@
+body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color:white;
+   text-align: center;
+   margin: 5px;
+   overflow: hidden;
+   
+}
+
+
+.card{
+    background-image:linear-gradient(to top right,orange ,navy);
+    box-shadow: 2px 2px 2px 2px;
+    margin: 50px;
+    padding: 40px;
+    border-radius: 5px;
+    border: 150px;
+    height: 150px;
+    width: 300px;
+}
+  
+.logo{
+
+   background-image:linear-gradient(to top right,orange ,navy);
+}
+.lg{
+    position: absolute;
+    max-width:70px;
+    max-height: 50px;
+    top:230px;
+    left:540px; 
+    background-image:linear-gradient(to top right,orange ,navy);
+}
+
+.vname{
+    color: white;
+    position: absolute;
+    top:210px;
+    left:625px;   
+}
+
+
+.slogan{
+    color: white;
+    position: absolute;
+    top:265px;
+    left:625px;  
+    font-size: 10px; 
+}
+
+P{
+    COLOR: white;
+    position: absolute;
+    top:234px;
+    left:625px;
+    font-size:15px;
+}
+
+
+.motto{
+   position: absolute;
+   top:220px;
+    right:510px;
+    color: white;
+    font-family: cursive;
+}
+
+
+.barcode{
+    position: absolute;
+    left: 510px;
+    bottom: 220px;
+
+}
+
+
+.tm{
+    position: absolute;
+    top:215px;
+    left:592px; 
+    font-size: 10px; 
+}
+
+.pt{
+
+    position: absolute;
+    max-width:80px;
+    height: 100px;
+    bottom:220px;
+    right:510px;
+
+}
+.bar{
+
+   max-width:200px;
+   max-height: 90px;
+}
+.course{
+    position: absolute;
+    left: 510px;
+    bottom: 280px;
+    font-size: 7.3px;
+    color: white;
+}
+
+.studentname{
+    position: absolute;
+    left: 510px;
+    bottom: 280px;
+    
+    color: white;
+     font-size: 18px;
+     font-size: 15px;
+}
+
+.STUDNO{
+    position: absolute;
+    left: 510px;
+    bottom: 240px;
+    color: white;
+}
