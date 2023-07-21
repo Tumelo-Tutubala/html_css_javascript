@@ -1,0 +1,84 @@
+form{
+    left: 35%;
+    top:30px ;
+    position: relative;
+}
+.container{
+     height: 500px;
+    width: 400px;
+    background-color:white;
+    box-shadow: 2px 1px 1px 2px ;
+    display: block !important;
+    border-radius: 4px;
+}
+.brand_name{
+    position: relative;
+     color: blue;
+   padding-top:20px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+input{
+    background-color: lightgray;
+    opacity: 0.6;
+    margin: 15px;
+    position: relative;
+ justify-items: center;
+  width: 250px;
+  height: 50px;
+ left: 60px;
+}
+button{
+    position: relative;
+    margin:15px;
+    width: 250px;
+  height: 50px;
+ border: none !important;;
+}
+.log_in{
+    background-color:blue;
+    color: white ;
+    left: 59.9px;
+}
+a{
+    text-decoration: none;
+}
+.pass_reset{
+    position: relative;
+    margin-left:70px;
+    left: 50px;
+    color: blue;  
+}
+.divider{
+    overflow:hidden;
+    text-align:center;
+}
+.divider:before{
+    background-color:lightgrey;
+    display : inline-block;
+    content:"";
+    height:1px;
+    position:relative;
+    vertical-align:middle;
+    width:100px;
+}
+.divider:after{
+    background-color:lightgrey;
+    display : inline-block;
+    content:"";
+    height:1px;
+    position:relative;
+    vertical-align:middle;
+    width:100px;
+
+}
+.create_acc{
+    position:relative;
+    background-color:green;
+    width:150px;
+    color:white;
+    left: 110px;
+}
+footer{
+    text-align: center;
+}
