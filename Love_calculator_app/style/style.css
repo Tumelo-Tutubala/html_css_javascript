@@ -1,0 +1,124 @@
+body{
+
+    background-color: rgba(0, 0, 0, 0.5);
+
+}
+   
+/*#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width:auto;
+    height: auto;
+  }*/
+.main{
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+
+}
+.container{
+    
+    border-radius: 30px;
+    align-items: center;
+    align-content: center;
+    position: fixed;
+    color: #f1f1f1;
+    width: 400px;
+    height:400px;
+    padding: 20px;
+    
+}
+.app_name{
+    margin-top: 25px;
+    text-align: center;
+    color: red;
+    text-shadow: 4PX 2PX skyblue;
+
+}
+
+.heart{
+    width:50px;
+    height:50px;
+   
+    transform-origin:center;
+    position:relative;
+    background:red;
+    margin:50px auto;
+    animation: heart 0.6s infinite;
+   
+}
+
+.heart::before,.heart::after{
+    content:'';
+    position:absolute;
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    background:red;
+
+}
+
+.heart::before{
+    left:-25px;
+}
+.heart::after{
+    top:-25px;
+}
+
+@keyframes heart{
+   0%{
+    transform:scale(1);
+   }
+   50%{
+    transform:scale(1.2);
+   }
+   100%{
+    transform:scale(1);
+   }
+}
+
+form {
+    display: block;
+   text-align: center;
+   margin-top: auto;
+   margin-bottom: auto;
+}
+
+input{
+    margin: 10px;
+    height: 30px;
+    width: 200px;
+    outline: none;
+}
+button{
+    background-color: red;
+    color: #f1f1f1;
+    border: skyblue solid ;
+    height: 50px;
+    width: 105px;
+}
+
+.result{
+    text-align: center;
+}
+
+p{
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+}
+
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;;
+}
+
+a{
+    text-decoration: none;
+    color: #f1f1f1;
+}
