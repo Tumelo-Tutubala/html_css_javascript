@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tumelo Tutubala</title>
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+  <!--Boostrap bundle-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="/CSS/bootstrap.min.css">
+
+
+  <!--javascript-->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+
+  <style>
+    :root {
+      --main-color: orange;
+      --sec-color: #1f262d;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .projects {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-items: center;
+      align-items: center;
+      margin-left: 10px auto;
+      margin-right: 10px auto;
+      flex-wrap: wrap;
+    }
+
+    .projects .project {
+      position: relative;
+      align-items: center;
+      justify-items: center;
+      justify-content: center;
+      width: 300px;
+      height: 300px;
+      margin-right: auto;
+      margin-left: auto;
+      margin-bottom: 50px;
+      z-index: 1;
+      text-align: center;
+      box-shadow: white;
+      flex-wrap: wrap;
+    }
+
+    .skills .skills-card {
+      position: relative;
+      align-items: center;
+      justify-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-right: auto;
+      margin-left: auto;
+      text-align: center;
+    }
+
+    .projects .project .proj-body img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      margin: 5px;
+    }
+
+    main.row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 20px;
+    }
+
+    .col header.title {
+      color: var(--main-color);
+      font-size: 2.6rem;
+      padding: 0px 0px 20px 30px;
+    }
+
+    .col .contents {
+      padding: 0px 30px;
+      border-left: 2px solid var(--main-color);
+    }
+
+    .col .contents .box {
+      color: var(--text-color);
+      position: relative;
+      padding: 20px;
+      border: 1px solid var(--bg-color);
+      cursor: pointer;
+      transition: all 0.4s;
+      margin-bottom: 20px;
+    }
+
+    .col .contents .box:hover {
+      box-shadow: 0px 3px 12px 0px var(--main-color);
+      border: 1px solid transparent;
+    }
+
+    .col .contents .box::before {
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      right: calc(100% + 22px);
+      background-color: var(--main-color);
+      top: 0;
+      background-color: var(--main-color);
+      border: 2px solid white;
+    }
+
+    .box h4 {
+      position: relative;
+      color: var(--main-color);
+    }
+
+    .box h3 {
+      font-size: 19px;
+      padding: 10px 0px 6px;
+      font-family: helvetica;
+      color: #444;
+    }
+
+    .box p {
+      line-height: 1.2;
+      color: #666;
+      font-size: 15px;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+    }
+
+    .card-footer a {
+      color: orange;
+      margin: 5px;
+    }
+
+    .navbar-brand {
+      font-weight: 900;
+    }
+
+    .skills-card {
+      width: 300px;
+      height: 200px;
+    }
+
+    @media(max-width:768px) {
+      main.row {
+        grid-template-columns: 3fr;
+      }
+    }
+
+    @media (min-width:968px) {
+      .projects {
+        display: flex;
+        flex-direction: row;
+      }
+
+      .skills {
+        display: flex;
+        flex-direction: row;
+      }
+
+      #home {
+        height: 600px;
+      }
+
+      .home {
+        margin-top: 150px;
+      }
+
+    }
+  </style>
+</head>
+
+<body class="bg-light">
+
+
+  <header class="mb-auto ">
+    <div class="">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-success shadow position-fixed w-100 z-2">
+
+        <a class="navbar-brand m-1 text-warning font-weight-bold" href="#"><img width="30"
+            class="d-inline-block align-top" src="/assets/favicon.ico" alt="logo">Tumelo Tutubala</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse text-warning" id="navbarNavDropdown">
+          <ul class="navbar-nav  text-center ">
+            <li class="nav-item text-warning">
+              <a class="nav-link text-warning" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-warning" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-warning" href="#resume">Resume</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-warning" href="#portfolio">
+                Portfolio
+              </a>
+
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-warning" href="#contact">
+                Contact
+              </a>
+
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+  </header>
+
+  <main class="p-4 bg-success text-lg-center mb-5" id="home">
+
+    <div class="home container-fluid p-5 shadow  bg-success bg-opacity-100">
+      <h1 class="text-white m-lg-4">Empowering Innovation Through Technology</h1>
+      <p class="lead text-white-50 ">Hello and welcome! I'm thrilled to have you explore my IT portfolio—a digital
+        gateway into my world of technology, creativity, and problem-solving. As an IT graduate, I've traversed a path
+        that's fueled by curiosity, dedication, and a relentless pursuit of excellence.</p>
+      <div class="card-footer text-warning m-2">
+        <button class="btn text-bg-warning bg-opacity-25"><a href="https://www.facebook.com/tumelo.youngj"
+            target="_blank"><i class="bi bi-facebook"></i></a></button>
+        <button class="btn text-bg-warning bg-opacity-25"><a href="https://www.instagram.com/tumelotutubala_sa/"
+            target="_blank"> <i class="bi bi-instagram"></i></a></button>
+        <button class="btn text-bg-warning bg-opacity-25"><a
+            href="https://www.linkedin.com/in/tumelo-tutubala-147082230" target="_blank"> <i
+              class="bi bi-linkedin"></i></a></button>
+        <button class="btn text-bg-warning bg-opacity-25"><a href="https://github.com/Tumelo-Tutubala"
+            target="_blank"><i class="bi bi-github"></i></a></button>
+        <button class="btn text-bg-warning bg-opacity-25"> <a href="tel:+27691606110"> <i
+              class="bi bi-telephone"></i></a></button>
+        <button class="btn text-bg-warning bg-opacity-25 "><a href="mailto:tumelotutubala1@gmail.com"> <i
+              class="bi bi-envelope"></i></a></button>
+      </div>
+      <p class="lead">
+        <a href="/assets/TumeloT_cv.pdf" class="btn btn-lg btn-secondary fw-bold border-white bg-warning">Download
+          CV</a>
+      </p>
+    </div>
+
+  </main>
+
+  <main class="mt-5">
+    <div class="container " id="about"></div>
+    <h2 class="text-center text-warning">About me</h2>
+    <div class="p-4 text-center">
+      <div class="clearfix text-muted">
+        <img src="/assets/Profile.jpg" class="col-md-6 float-md-start mb-3 ms-md-3 " alt="..."
+          style="height: 300px; width:300px;">
+
+        <p>
+          Hello there! I'm Tumelo Tutubala, a passionate and motivated IT graduate with a profound fascination for all
+          things technology. As a lifelong learner in the dynamic realm of information technology, I'm driven by the
+          endless possibilities that arise from harnessing the power of digital innovation.
+        </p>
+
+        <p>
+          I earned my Diploma in Information Technology from Vaal University of Technology, graduating with a strong
+          foundation in both theoretical concepts and hands-on applications. Throughout my academic journey, I've
+          explored diverse facets of IT, from programming languages and algorithms to network architecture and
+          cybersecurity strategies
+        </p>
+
+        <p>
+          I'm excited to connect with fellow tech enthusiasts, potential collaborators, and professionals who share my
+          passion for IT. Feel free to explore my portfolio, where you'll find a showcase of my projects, skills, and
+          experiences. Whether you're interested in discussing innovative ideas or exploring potential opportunities,
+          I'm just an email away at <strong class="text-warning">tumelotutubala1@gmail.com</strong>.
+
+          Thank you for visiting my corner of the digital universe. Let's embark on a journey of technology, innovation,
+          and limitless possibilities together!
+        </p>
+      </div>
+    </div>
+    </div>
+  </main>
+
+  <main id="resume">
+    <div class="container text-center">
+      <h2 class="text-warning m-5">Resume</h2>
+      <div class="container">
+        <main class="row">
+          <section class="col">
+            <header class="title">
+
+              <!--Education section-->
+              <h2 class="text-warning">EDUCATION</h2>
+            </header>
+
+
+            <div class="contents">
+              <div class="box">
+                <h4>2020 - 2022</h4>
+                <h3>Diploma in Information Technology </h3>
+                <p>Throughout the courseo of my diploma, I gained comprehensive knowledge in wide array of <abbr
+                    title="Information Technology">IT</abbr>. These include :</p>
+                <p>Software development</p>
+                <p>Database management</p>
+                <p>Networking</p>
+                <p>Web development</p>
+                <p>IT support</p>
+              </div>
+
+              <div class="box">
+                <h4>2014 - 2018</h4>
+                <h3>Matric </h3>
+                <p>This pivotal stage of my education equipped me with a strong foundation in various subjects,
+                  fostering critical thinking and problem solving skills.</p>
+
+                <p>My matriculation did not only represents academic accomplishments but also reflects my ability to
+                  handle challenging tasks, meet deadlines and maimtain a strong work ethic.</p>
+              </div>
+            </div>
+          </section>
+
+
+          <section class="col">
+            <header class="title">
+
+              <!--EXPERIENCE section-->
+              <h2 class="text-warning">EXPERIENCE</h2>
+            </header>
+
+
+            <div class=" container contents">
+              <div class="box">
+                <h4>2023</h4>
+                <h3>Educators Assistant</h3>
+                <p>DR MOLEFI OLIFANT SCHOOL OF SPECIALISATION</p>
+                <h6>DUTIES :</h6>
+                <p>Classroom support</p>
+                <p>Student assistance</p>
+                <p>Behavior management</p>
+                <p>Administrative tasks</p>
+              </div>
+
+              <div class="box">
+                <h4>2023</h4>
+                <h3>Bouncer</h3>
+                <p class="text-uppercase">Beasting Brothers Security(Part-time)</p>
+                <h6>DUTIES :</h6>
+                <p>Crowd management</p>
+                <p>Emergency response</p>
+                <p>Customer service</p>
+                <p>Security and Access control</p>
+              </div>
+            </div>
+          </section>
+
+        </main>
+      </div>
+  </main>
+
+  <main class="mt-3">
+    <h2 class="text-warning text-center">Skills</h2>
+    <div
+      class="skills  d-flex flex-sm-column flex-md-row flex-lg-row flex-wrap justify-content-center align-content-center ">
+
+      <div class="skills-card border m-2 p-3 shadow">
+        <h4 class="text-muted">WEB DEVELOPMENT</h4>
+        <ul class=" list-unstyled text-center p-3">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>BOOTSTRAP</li>
+        </ul>
+      </div>
+      <div class="skills-card border  m-2 shadow p-3">
+        <h4 class="text-muted">DATABASE MANAGEMENT</h4>
+        <ul class=" list-unstyled p-2">
+          <li>SQL</li>
+          <li>DATABASE DESIGN</li>
+
+        </ul>
+
+      </div>
+      <div class="skills-card border m-2 p-3 shadow">
+        <h4 class="text-muted">PROGRAMMING LANGUAGES</h4>
+        <ul class=" list-unstyled">
+          <li>JAVA</li>
+          <li>PYTHON</li>
+          <li>VB.NET</li>
+        </ul>
+      </div>
+      <div class="skills-card border m-3 p-3 shadow">
+        <h4 class="text-muted">SOFTWARE DEVELOPMENT</h4>
+        <ul class=" list-unstyled">
+          <li>AGILE METHODOLOGIES</li>
+          <li>SOFTWARE TESTING AND DEBUGGING</li>
+        </ul>
+      </div>
+      <div class="skills-card border m-3 p-3 shadow">
+        <h4 class="text-muted">SOFT SKILLS</h4>
+        <ul class=" list-unstyled">
+          <li>PROBLEM-SOLVING</li>
+          <li>COMMUNICATION</li>
+          <li>TEAM COLLABORATION</li>
+        </ul>
+      </div>
+
+  </main>
+
+  <main id="portfolio">
+
+    <div class="containter">
+      <h2 class="text-center  text-warning my-5">Portfolio</h2>
+      <div class="projects
+     " id="portfolio">
+        <div class="project p-2 ">
+          <div class="proj-body">
+            <img src="/assets/projects/PROJECT_2.png" height="" alt="">
+            <p class="text-muted">Facebook log in page created with HTML AND CSS{designed for desktop}.</p>
+          </div>
+          <div class="proj-footer m-1">
+            <a class="btn btn-warning px-2 text-success " href="https://facebooklogindemo.netlify.app/"
+              target="_blank">Demo
+              <i class="bi bi-box-arrow-up-right"></i></a>
+            <a class="btn btn-success px-2 text-warning "
+              href="https://github.com/Tumelo-Tutubala/html_css_javascript/tree/main/login_facebook"
+              target="_blank">Code <i class="bi bi-box-arrow-up-right"></i></a>
+          </div>
+        </div>
+
+        <div class="project p-2 ">
+          <div class="proj-body">
+            <img src="/assets/projects/PROJECT_1.png" height="" alt="">
+            <p class="text-muted">Love calculator created with HTML,CSS and JAVASCRIPT.</p>
+          </div>
+          <div class="proj-footer m-1">
+            <a class="btn btn-warning px-2 text-success " href="https://love-calculator4798.netlify.app/"
+              target="_blank">Demo
+              <i class="bi bi-box-arrow-up-right"></i></a>
+            <a class="btn btn-success px-2 text-warning "
+              href="https://github.com/Tumelo-Tutubala/html_css_javascript/tree/main/Love_calculator_app"
+              target="_blank">Code <i class="bi bi-box-arrow-up-right"></i></a>
+          </div>
+        </div>
+        <div class="project  p-2 ">
+          <div class="proj-body">
+            <img src="/assets/projects/PROJECT_3.png" height="200px" width="200px" alt="">
+            <p class="text-muted">Digital clock created with HTML,CSS and JAVASCRIPT{designed for desktop}.</p>
+          </div>
+          <div class="proj-footer m-2 mb-5">
+            <a class="btn btn-warning px-2 text-success " href="https://desktopdigitalclock.netlify.app/"
+              target="_blank">Demo
+              <i class="bi bi-box-arrow-up-right"></i></a>
+            <a class="btn btn-success px-2 text-warning "
+              href="https://github.com/Tumelo-Tutubala/html_css_javascript/tree/main/digital clock" target="_blank">Code
+              <i class="bi bi-box-arrow-up-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </main>
+
+  <main class="text-center" id="contact">
+    <div class=" container mt-5 ">
+      <div class="shadow text-center p-4  mb-5">
+        <h3 class="text-warning ">CONNECT WITH ME</h3>
+        <div class="card-body">
+          <div class="card-footer text-muted">
+            <a href="https://www.facebook.com/tumelo.youngj" target="_blank"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/tumelotutubala_sa/" target="_blank"> <i class="bi bi-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/tumelo-tutubala-147082230" target="_blank"> <i
+                class="bi bi-linkedin"></i></a>
+            <a href="https://github.com/Tumelo-Tutubala" target="_blank"><i class="bi bi-github"></i></a>
+            <a href="tel:+27691606110"> <i class="bi bi-telephone"></i></a>
+
+          </div>
+          <p><a class="btn btn-warning m-2" href="mailto:tumelotutubala1@gmail.com"> <i
+                class="bi bi-envelope text-white"> tumelotutubala1@gmail.com</i></a></p>
+          <address>
+            <i class="bi bi-geo-alt">Vanderbijlpark ,Gauteng, 1911.</i>
+          </address>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+
+  <footer class="footer text-center bg-success b-0 p-4">
+    <p class="text-warning">&copy 2023 Tumelo Tutubala</p>
+  </footer>
+
+  <script src="/JAVASCRIPT/bootstrap.min.js"></script>
+</body>
+
+</html>
